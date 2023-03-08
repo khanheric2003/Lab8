@@ -76,7 +76,7 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
 
-    /**s
+    /**
      *  This function check whether city belong in the List
      * @param city
      * @return

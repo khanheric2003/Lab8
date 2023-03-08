@@ -45,12 +45,19 @@ public class CustomListTest {
         boolean check = list.hasCity(city);
         assertTrue(check);
     }
-//    @Test
-//    public void countCityTest(){
-//        list = MockCityList();
-//        int listSize = list.getCount();
-//        list.addCity(new City("Estevan", "SK"));
-//        assertEquals(list.getCount(),listSize + 1);
-//    }
+    @Test
+    public void countCityTest(){
+        list = MockCityList();
+
+        // add first city
+        list.addCity(new City("Estevan", "SK"));
+        // add second city
+        City city = new City("Charlottetown", "Prince Edward Island");
+        list.addCity(city); // added city
+
+        int listSize = list.getCount();
+
+        assertEquals( list.countCities() ,listSize);
+    }
 
 }
