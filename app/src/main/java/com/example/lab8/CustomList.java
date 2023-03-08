@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -44,6 +46,17 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
+    /**
+     * This return a sorted list of cities
+     * @return
+     *    return the sorted list
+     */
+    public List getCities(){
+        List list = cities;
+        Collections.sort(list);
+        return list;
+    }
+
 
     public int getCount(){
         return cities.size();
@@ -52,5 +65,28 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city){
         cities.add(city);
     }
+    /**
+     *  This function count all the cities inside the list
+     * @return
+     *      return city list size
+     */
+    public int countCities() {
+        return 0;
+//        return cities.size();
+    }
+
+
+//    /**
+//     *  This function check whether city belong in the List
+//     * @param city
+//     * @return
+//     *      return boolean whether the city inside cityList
+//     */
+//    public boolean hasCity(City city) {
+//        return false;
+////        if(cities.contains(city)) {return true;}
+////        else {return false;}
+//    }
+
 
 }
