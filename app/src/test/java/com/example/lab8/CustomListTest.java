@@ -42,7 +42,8 @@ public class CustomListTest {
         City city = new City("Charlottetown", "Prince Edward Island");
         list.addCity(city); // added city
 
-        assertTrue(list.getCities().contains(city));
+        boolean check = list.hasCity(city);
+        assertTrue(check);
     }
 //    @Test
 //    public void countCityTest(){
