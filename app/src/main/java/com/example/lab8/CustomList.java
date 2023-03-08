@@ -88,12 +88,12 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void deleteCity(City city) {
-//        if (hasCity(city) != false) {
-//            cities.remove(city);
-//        }
-//        else {
-//            throw new IllegalArgumentException();
-//        }
+        if (hasCity(city) != false) {
+            cities.remove(city);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
     }
 
 }
